@@ -37,6 +37,6 @@ def gen_alert(idx):
 def generate_alerts(n):
     return {"alerts": [gen_alert(i) for i in range(n)]}
 
-sample = generate_alerts(100)
+sample = generate_alerts(1)
 print(json.dumps(sample, indent=2))
 
