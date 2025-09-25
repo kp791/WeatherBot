@@ -11,7 +11,7 @@ response = requests.get(url)
 data = response.json()
 
 # Check for alerts
-alerts = data.get("alerts", [])
+alerts = data.get("alerts")
 if alerts:
     for alert in alerts:
         print(f"Source: {alert['sender_name']}")
@@ -22,4 +22,6 @@ if alerts:
         print("-" * 30)
 else:
     print("No active government weather alerts for this location.")
+
+print(alerts)
 
